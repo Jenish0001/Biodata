@@ -9,7 +9,14 @@
     android:gravity="center_horizontal"
     android:background="@color/white"
     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:gravity="center"
@@ -26,46 +33,71 @@
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 />
-            <ImageView
-                android:layout_marginRight="10dp"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+<!--            <ImageView-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
 
-                android:src="@drawable/ic_twotone_check_24"
-                />
+<!--                android:src="@drawable/ic_twotone_check_24"-->
+<!--                />-->
 
     </LinearLayout>
-            <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:padding="10dp"
+            android:text="|| Om namah shivay ||"
+            android:textColor="@color/black"
+
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-
-
                 android:orientation="vertical"
                 >
-                   <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                       >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Name :"
                         android:textColor="@color/black"
                         android:textSize="20dp"
 
                         />
+
                     <EditText
                         android:id="@+id/name_edt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
                         android:hint="name"
-                        android:clickable="true"
+                        android:padding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColorHint="#656565"
+
                         android:textSize="20dp"
-                        />
-                    </LinearLayout>
+                        android:maxLines="1"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -75,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="Surname :"
+                        android:fontFamily="@font/poppins"
                         android:textColor="@color/black"
                         android:textSize="20dp"
 
@@ -84,8 +117,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:hint="Surname"
+                        android:textColor="@color/black"
+                        android:textColorHint="#656565"
                         android:textSize="20dp"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -97,6 +134,8 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="Fathername :"
+                        android:fontFamily="@font/poppins"
+
                         android:textColor="@color/black"
                         android:textSize="20dp"
 
@@ -107,7 +146,10 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:hint="fathername"
+                        android:textColorHint="#656565"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -120,8 +162,9 @@
                         android:padding="10dp"
                         android:text="Village :"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
 
+                        android:textSize="20dp"
                         />
                     <EditText
                         android:id="@+id/village_edt"
@@ -129,7 +172,11 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:hint="village "
+                        android:fontFamily="@font/poppins"
                         android:textSize="20dp"
+                        android:textColorHint="#656565"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -140,20 +187,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Age :"
                         android:textColor="@color/black"
                         android:textSize="20dp"
 
                         />
-                    <EditText
-                        android:id="@+id/age_edt"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/age1_txt"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:hint="Age"
-                        android:inputType="numberDecimal"
+                        android:text="0"
                         android:textSize="20dp"
+                        android:textColor="@color/black"
                         />
+                    <SeekBar
+                        android:id="@+id/age_seek"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:min="0"
+                        android:max="100"
+
+                        android:layout_gravity="bottom"
+                        />
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -163,6 +220,49 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Gender :"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+
+                        />
+                    <RadioGroup
+                        android:id="@+id/rg_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/male_rg_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+
+                        />
+                    <RadioButton
+                        android:id="@+id/female_rg_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+
+                        />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Mobile No.:"
                         android:textColor="@color/black"
                         android:textSize="20dp"
@@ -173,9 +273,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:hint="Mobile no."
+                        android:textColor="@color/black"
+                        android:textColorHint="#656565"
                         android:inputType="numberDecimal"
                         android:textSize="20dp"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -187,6 +291,7 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="Education :"
+                        android:fontFamily="@font/poppins"
                         android:textColor="@color/black"
                         android:textSize="20dp"
 
@@ -195,9 +300,13 @@
                         android:id="@+id/education_edt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:padding="10dp"
+                        android:textColorHint="#656565"
+                        android:textColor="@color/black"
                         android:hint="Educatoin "
                         android:textSize="20dp"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -208,6 +317,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Birth Data:"
                         android:textColor="@color/black"
                         android:textSize="20dp"
@@ -218,14 +328,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:fontFamily="@font/poppins"
                         android:hint="Birth data"
+                        android:textColor="@color/black"
+                        android:textColorHint="#656565"
                         android:textSize="20dp"
                         android:inputType="date"
+                        android:maxLines="1"
                         />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -234,17 +349,54 @@
                         android:text="Skills :"
                         android:textColor="@color/black"
                         android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+
+                           />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                    <CheckBox
+
+                        android:id="@+id/reading_chk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reading"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"
 
                         />
-                    <EditText
-                        android:id="@+id/skills_edt"
-                        android:layout_width="match_parent"
+                                <CheckBox
+                                    android:id="@+id/dancing_chk"
+                                    android:layout_width="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dancing"
+                                    android:textSize="20dp"
+                                    android:textColor="@color/black"
+                                    />
+                            </LinearLayout>
+                    <CheckBox
+
+                        android:id="@+id/movie_chk"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:hint="Skills "
+                        android:text="Movie"
                         android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+
                         />
+
+
+                        </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -256,6 +408,7 @@
                         android:text="Gmail :"
                         android:textColor="@color/black"
                         android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
 
                         />
                     <EditText
@@ -265,13 +418,18 @@
                         android:padding="10dp"
                         android:hint="Email"
                         android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
+                        android:maxLines="1"
+                        android:textColorHint="#656565"
+                        android:fontFamily="@font/poppins"
                         />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
                     >
                     <Button
                         android:id="@+id/done_btn"
@@ -286,4 +444,5 @@
                 </LinearLayout>
             </LinearLayout>
     </LinearLayout>
-
+    </ScrollView>
+</LinearLayout>
